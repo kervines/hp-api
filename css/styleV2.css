@@ -4,13 +4,6 @@
 :root {
   --font-pirata: 'Pirata One', system-ui;
   --font-space: 'Space Mono', monospace;
-
-  /* colors */
-  --color-primary: #030637;
-  --color-second: #3c0753;
-  --color-thrid: #720455;
-  --color-fourth: #910a67;
-
   /* shadow */
   --shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
 }
@@ -21,20 +14,29 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--font-space);
+}
+
+#title {
+  font-size: 4rem;
+  font-family: 'Harry P';
 }
 
 h1,
 h2 {
+  text-align: center;
   font-family: 'Lato', sans-serif;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
 }
 
 body {
   width: 100%;
   height: 100vh;
   padding: 1rem;
-  background-color: #030637;
 }
 
 span {
@@ -42,19 +44,35 @@ span {
 }
 
 .container {
+  display: grid;
+  place-content: center;
+}
+
+.sidebar {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  width: 350px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .card {
-  flex: 1;
+  width: 300px;
   padding: 1rem;
   background-color: var(--color-fourth);
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
   margin-bottom: 0.5rem;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .perfil {
@@ -62,5 +80,6 @@ span {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border: 5px solid white;
+  object-position: top;
+  border: 5px solid var(--color-second);
 }
