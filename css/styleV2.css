@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --font-pirata: 'Pirata One', system-ui;
+  --font-space: 'Space Mono', monospace;
+
+  /* colors */
+  --color-primary: #030637;
+  --color-second: #3c0753;
+  --color-thrid: #720455;
+  --color-fourth: #910a67;
+
+  /* shadow */
+  --shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font-space);
+}
+
+h1,
+h2 {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #030637;
+}
+
+span {
+  text-transform: capitalize;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--color-fourth);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.perfil {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid white;
+}
