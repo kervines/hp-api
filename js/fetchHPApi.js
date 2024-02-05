@@ -2,6 +2,11 @@ import { createChar } from './createChar.js';
 
 export default function initFetchApi() {
   const urlAPI = 'https://hp-api.onrender.com/api/characters/';
+  const container = document.getElementById('container');
+
+  container.innerHTML = `
+  <div class="loading"></div>
+  `;
 
   const fetchAPI = async (url) => {
     let idChar = 0;
@@ -9,6 +14,7 @@ export default function initFetchApi() {
     const response = await (await hpAPI).json();
 
     clearChar();
+
     for (idChar; idChar < response.length; idChar++) {
       const {
         name,
@@ -34,6 +40,7 @@ export default function initFetchApi() {
       );
     }
   };
+
   fetchAPI(urlAPI);
 
   function clearChar() {
@@ -41,7 +48,7 @@ export default function initFetchApi() {
     container.innerHTML = '';
   }
 
-  function selectHouse() {
+  async function selectHouse() {
     const form = document.querySelector('form');
     form.addEventListener('change', (e) => {
       const houseName = e.target.value;
