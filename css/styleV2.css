@@ -49,6 +49,7 @@ span {
 }
 
 .sidebar {
+  justify-self: center;
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 20px;
@@ -61,6 +62,8 @@ span {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -82,4 +85,25 @@ span {
   object-fit: cover;
   object-position: top;
   border: 5px solid var(--color-second);
+}
+
+/* loading animation */
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 10px solid rgb(152, 152, 250);
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  animation: loading 1s linear infinite;
+  margin-top: 2rem;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
