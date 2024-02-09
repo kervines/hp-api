@@ -1,5 +1,16 @@
 const container = document.querySelector('.card-container');
 
+function createCard(container, hs) {
+  const card = document.createElement('div');
+  if (hs) {
+    const classHouse = hs.toLowerCase();
+    card.classList.add(classHouse);
+  }
+  card.classList.add('card');
+  container.appendChild(card);
+  return card;
+}
+
 export function createChar(
   image,
   name,
@@ -11,14 +22,8 @@ export function createChar(
   wood,
   core
 ) {
-  function createCard(container) {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    container.appendChild(card);
-    return card;
-  }
-
-  createCard(container).innerHTML = `<div class="image-container">
+  const card = createCard(container, house);
+  card.innerHTML = `<div class="image-container">
   <img class="perfil" src="${
     image ||
     'https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg'
