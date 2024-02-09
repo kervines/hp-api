@@ -43,6 +43,11 @@ span {
   text-transform: capitalize;
 }
 
+.logo {
+  width: 200px;
+  justify-self: center;
+}
+
 .container {
   display: grid;
   place-content: center;
@@ -77,6 +82,41 @@ span {
   border-radius: 20px;
   margin-bottom: 0.5rem;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.3);
+
+  background: linear-gradient(
+    45deg,
+    rgba(213, 213, 213, 1) 30%,
+    rgba(231, 231, 231, 1) 30%
+  );
+}
+
+.gryffindor {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 171, 43, 1) 30%,
+    rgba(189, 30, 45, 1) 30%
+  );
+}
+.slytherin {
+  background: linear-gradient(
+    180deg,
+    rgba(208, 211, 212, 1) 30%,
+    rgba(0, 104, 57, 1) 30%
+  );
+}
+.hufflepuff {
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 1) 30%,
+    rgba(250, 200, 38, 1) 30%
+  );
+}
+.ravenclaw {
+  background: linear-gradient(
+    180deg,
+    rgba(204, 208, 255, 1) 30%,
+    rgba(0, 98, 169, 1) 30%
+  );
 }
 
 .perfil {
@@ -125,5 +165,34 @@ span {
     object-fit: cover;
     object-position: top;
     border: 5px solid var(--color-second);
+  }
+
+  .gryffindor {
+    background: linear-gradient(
+      90deg,
+      rgba(245, 171, 43, 1) 20%,
+      rgba(189, 30, 45, 1) 20%
+    );
+  }
+  .slytherin {
+    background: linear-gradient(
+      90deg,
+      rgba(208, 211, 212, 1) 20%,
+      rgba(0, 104, 57, 1) 20%
+    );
+  }
+  .hufflepuff {
+    background: linear-gradient(
+      90deg,
+      rgba(51, 51, 51, 1) 20%,
+      rgba(250, 200, 38, 1) 20%
+    );
+  }
+  .ravenclaw {
+    background: linear-gradient(
+      90deg,
+      rgba(204, 208, 255, 1) 20%,
+      rgba(0, 98, 169, 1) 20%
+    );
   }
 }
